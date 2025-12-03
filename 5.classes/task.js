@@ -9,7 +9,7 @@ class PrintEditionItem {
   }
 
   fix() {
-    this.state *= 1.5; // Используем сеттер с проверкой границ
+    this.state *= 1.5;
   }
 
   set state(value) {
@@ -93,5 +93,6 @@ class Library {
     return null;
   }
 }
+
 
 
