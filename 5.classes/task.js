@@ -1,29 +1,29 @@
 class PrintEditionItem {
+  #state = 100;
+
   constructor(name, releaseDate, pagesCount) {
     this.name = name;
     this.releaseDate = releaseDate;
     this.pagesCount = pagesCount;
-    this.state = 100;
     this.type = null;
   }
 
   fix() {
-    this.state *= 1.5;
-    this.state = this.state;
+    this.state *= 1.5; // Используем сеттер с проверкой границ
   }
 
   set state(value) {
     if (value < 0) {
-      this.state = 0;
+      this.#state = 0;
     } else if (value > 100) {
-      this.state = 100;
+      this.#state = 100;
     } else {
-      this.state = value;
+      this.#state = value;
     }
   }
 
   get state() {
-    return this.state;
+    return this.#state;
   }
 }
 
@@ -93,4 +93,5 @@ class Library {
     return null;
   }
 }
+
 
