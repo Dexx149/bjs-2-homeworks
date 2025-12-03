@@ -12,7 +12,7 @@ class PrintEditionItem {
     this.state = this.state;
   }
 
-  set setState(value) {
+  set state(value) {
     if (value < 0) {
       this.state = 0;
     } else if (value > 100) {
@@ -22,7 +22,7 @@ class PrintEditionItem {
     }
   }
 
-  get getState() {
+  get state() {
     return this.state;
   }
 }
@@ -93,3 +93,4 @@ class Library {
     return null;
   }
 }
+
